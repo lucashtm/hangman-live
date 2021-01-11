@@ -9,7 +9,7 @@ const server = http.createServer(app);
 const sockets = socketio(server);
 const connected = [];
 let words;
-fs.readFile('palavras.txt', 'utf8', (err, data) => {
+fs.readFile('words.txt', 'utf8', (err, data) => {
   if(err) throw err;
   words = data.split('\n');
 })
